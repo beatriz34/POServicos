@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// routes/web.php
+Route::get('/', function () {
+    return response()->json(['hello_url' => '/hello']);
+});
+
+Route::get('/hello', function () {
+    return 'Hello, World!';
+});
